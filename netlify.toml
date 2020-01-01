@@ -3,4 +3,4 @@
   command = "./build.sh"
 
 [template.environment]
-  WORDPRESS_URL = "Replace me with your Wordpress URL"
+  WORDPRESS_URL = "https://ecstatic-bartik657.on.getshifter.io"
