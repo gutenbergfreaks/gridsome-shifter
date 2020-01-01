@@ -1,6 +1,6 @@
 module.exports = {
-  siteName: 'Gridsome',
-  siteDescription: 'A WordPress starter for Gridsome',
+  siteName: 'Guntenberg Freaks',
+  siteDescription: 'Playground for Gutenberg Freaks',
 
   templates: {
     WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
