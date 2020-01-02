@@ -1,3 +1,14 @@
+const path = require('path')
+
+function addStyleResource (rule) {
+  rule.use('style-resource')
+    .loader('style-resources-loader')
+    .options({
+      patterns: [
+        path.resolve(__dirname, './src/assets/sass/styles.sass'),
+      ],
+    })
+}
 module.exports = {
   siteName: 'Guntenberg Freaks',
   siteDescription: 'Playground for Gutenberg Freaks',
