@@ -10,22 +10,22 @@
 </template>
 
 <page-query>
-query Home ($page: Int) {
-  allWordPressPost (page: $page, perPage: 10) @paginate {
-    pageInfo {
-      totalPages
-      currentPage
-    }
-    edges {
-      node {
-        id
-        title
-        path
-        excerpt
+  query Home($page: Int) {
+    allWordPressPost(page: $page, perPage: 10) @paginate {
+      pageInfo {
+        totalPages
+        currentPage
+      }
+      edges {
+        node {
+          id
+          title
+          path
+          excerpt
+        }
       }
     }
   }
-}
 </page-query>
 
 <script>

@@ -1,0 +1,12 @@
+{
+    "name": "gridsome-shifter",
+    "schemaPath": "gridsome-shifter.graphql",
+    "extensions": {
+        "endpoints": {
+            "shifter": {
+                "url": "http://localhost:8080/___graphql",
+                "introspect": true
+            }
+        }
+    }
+}

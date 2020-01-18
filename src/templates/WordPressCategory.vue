@@ -11,27 +11,27 @@
 </template>
 
 <page-query>
-query WordPressCategory ($id: ID!, $page: Int) {
-  wordPressCategory(id: $id) {
-    title
-    belongsTo(page: $page, perPage: 10) @paginate {
-      pageInfo {
-        totalPages
-        currentPage
-      }
-      edges {
-        node {
-          ... on WordPressPost {
-            id
-            title
-            path
-            excerpt
-        	}
+  query WordPressCategory($id: ID!, $page: Int) {
+    wordPressCategory(id: $id) {
+      title
+      belongsTo(page: $page, perPage: 10) @paginate {
+        pageInfo {
+          totalPages
+          currentPage
+        }
+        edges {
+          node {
+            ... on WordPressPost {
+              id
+              title
+              path
+              excerpt
+            }
+          }
         }
       }
     }
   }
-}
 </page-query>
 
 <script>
