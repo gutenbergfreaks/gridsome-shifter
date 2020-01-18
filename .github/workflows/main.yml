@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Start WordPress
+        id: start
+        uses: getshifter/actions-start@v2
+        env:
+          SHIFTER_USER: ${{ secrets.SHIFTER_USER }}
+          SHIFTER_PASS: ${{ secrets.SHIFTER_PASS }}
+          SHIFTER_SITE_ID: ${{ secrets.SHIFTER_SITE_ID }}
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: install
+        run: npm install
+      - name: build
+        env:
+          CONTAINER_URL: ${{ steps.start.outputs.shifter_app_url }}
+        run: npm run build
+      - name: Deploy to netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --prod
+      - name: Stop WordPress
+        uses: getshifter/actions-stop@v2
+        env:
+          SHIFTER_USER: ${{ secrets.SHIFTER_USER }}
+          SHIFTER_PASS: ${{ secrets.SHIFTER_PASS }}
+          SHIFTER_SITE_ID: ${{ secrets.SHIFTER_SITE_ID }}
