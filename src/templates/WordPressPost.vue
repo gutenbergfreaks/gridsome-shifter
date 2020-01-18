@@ -28,29 +28,29 @@
 </template>
 
 <page-query>
-query WordPressPost ($id: ID!) {
-  wordPressPost(id: $id) {
-    title
-    content
-    featuredMedia {
-      sourceUrl
-      altText
-      mediaDetails {
-        width
+  query WordPressPost($id: ID!) {
+    wordPressPost(id: $id) {
+      title
+      content
+      featuredMedia {
+        sourceUrl
+        altText
+        mediaDetails {
+          width
+        }
+      }
+      categories {
+        id
+        title
+        path
+      }
+      tags {
+        id
+        title
+        path
       }
     }
-    categories {
-      id
-      title
-      path
-    }
-    tags {
-      id
-      title
-      path
-    }
   }
-}
 </page-query>
 
 <script>
