@@ -1,0 +1,10 @@
+:root {
+    --baseMargin: 20;
+    --baseContent: 640;
+    --color-base: #fff;
+    --color-body: #000;
+    --color-link: #ba0000;
+}
+a {
+    color: var(--color-link);
+}
