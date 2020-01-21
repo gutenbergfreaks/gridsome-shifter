@@ -1,4 +1,5 @@
-@import 'config.css';
-a {
-    color: var(--color-link);
-}
+@import "config.css";
+@import "base.css";
+@import "components/list.css";
+@import "layout/global.css";
+

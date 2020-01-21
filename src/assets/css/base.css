@@ -1,0 +1,16 @@
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+}
+nav[role="navigation"] {
+  text-align: center;
+}
+nav[role="navigation"] a {
+  display: inline-block;
+  margin: 1em 0.75em 2em;
+}
+a {
+  color: var(--color-link);
+}
