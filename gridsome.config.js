@@ -30,8 +30,12 @@ module.exports = {
     {
       loaderOptions: {
         postcss: {
-          sourceMap: false,
+          //sourceMap: false,
+          config: {
+            path: './',
+          },
           plugins: [
+            require('postcss-import')(),
             require('autoprefixer')(),
             require('postcss-preset-env')()
           ]
