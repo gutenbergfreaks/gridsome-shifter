@@ -6,6 +6,7 @@
       </h1>
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
+        <a class="nav__link" href="https://www.notion.so/cf9e7cf8bdf2459795d27b7b5e2c3b29?v=4d0c55a8efeb47c590d7152b9af51b67">Note (Notion)</a>
         <g-link class="nav__link" to="/about/">About</g-link>
       </nav>
     </header>
@@ -14,8 +15,24 @@
 </template>
 
 <style>
+:root {
+  --color-body: #000;
+  --color-primary: #BA0000;
+}
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: 'Girassol','Noto Serif JP',serif;
+  color: var(--color-body);
+  font-size: 18px;
+  margin: 0;
+}
+a {
+  color: var(--color-body);
+}
+p {
+  font-family: 'Noto Serif JP',serif;
+}
+a:hover {
+  color: var(--color-primary);
 }
 
 img {
@@ -31,7 +48,7 @@ nav[role="navigation"] a {
 }
 
 .layout {
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -39,7 +56,14 @@ nav[role="navigation"] a {
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+}
+.header h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+.header h1 a {
+  text-decoration: none;
 }
 .nav__link {
   margin-left: 20px;
