@@ -14,8 +14,21 @@
 </template>
 
 <style>
+:root {
+  --color-body: #000;
+  --color-primary: #BA0000;
+}
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: 'Girassol','Noto Serif JP',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color: var(--color-body);
+  font-size: 18px;
+  margin: 0;
+}
+a {
+  color: var(--color-body);
+}
+a:hover {
+  color: var(--color-primary);
 }
 
 img {
@@ -31,7 +44,7 @@ nav[role="navigation"] a {
 }
 
 .layout {
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -39,7 +52,13 @@ nav[role="navigation"] a {
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+}
+.header h1 {
+  font-size: 3rem;
+}
+.header h1 a {
+  text-decoration: none;
 }
 .nav__link {
   margin-left: 20px;
