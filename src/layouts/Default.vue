@@ -32,6 +32,9 @@ a {
 a:hover {
   color: var(--color-primary);
 }
+p {
+  line-height: 1.75em;
+}
 
 img {
   max-width: 100%;

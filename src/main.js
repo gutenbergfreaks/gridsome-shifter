@@ -1,4 +1,5 @@
 import DefaultLayout from '~/layouts/Default.vue'
+import 'normalize.css'
 
 export default function (Vue , { head }) {
   head.link.push({
