@@ -18,9 +18,10 @@
 :root {
   --color-body: #000;
   --color-primary: #BA0000;
+  --color-bg: #f8f8f8;
 }
 body {
-  font-family: 'Girassol','Noto Serif JP',serif;
+  font-family: 'Noto Serif JP',serif;
   color: var(--color-body);
   font-size: 18px;
   margin: 0;
@@ -28,11 +29,11 @@ body {
 a {
   color: var(--color-body);
 }
-p {
-  font-family: 'Noto Serif JP',serif;
-}
 a:hover {
   color: var(--color-primary);
+}
+p {
+  line-height: 1.75em;
 }
 
 img {
@@ -56,6 +57,7 @@ nav[role="navigation"] a {
 .header {
   display: flex;
   justify-content: space-between;
+  font-family: 'Girassol','Noto Serif JP',serif;
   /* margin-bottom: 20px; */
 }
 .header h1 {

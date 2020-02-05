@@ -64,6 +64,27 @@ export default {
 </script>
 
 <style>
+  a {
+    word-break: break-all;
+  }
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
+  }
+  pre {
+    max-width: 100%;
+    overflow: scroll;
+    word-break: break-all;
+    background-color: var(--color-bg);
+    padding: 0.5em 1em;
+  }
+  blockquote {
+    border-left: 1px solid var(--color-primary);
+    margin: 1em 0;
+    padding: 0 0 0 1em;
+    font-size: 21px;
+  }
+
   ul.list {
     list-style: none;
     padding: 0;
