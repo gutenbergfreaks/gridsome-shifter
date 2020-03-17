@@ -70,6 +70,9 @@ export default {
   code {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
+    font-size: smaller;
+    padding: .5em .7em;
+    background-color: var(--color-bg);
   }
   pre {
     max-width: 100%;
@@ -77,6 +80,9 @@ export default {
     word-break: break-all;
     background-color: var(--color-bg);
     padding: 0.5em 1em;
+  }
+  figcaption {
+    font-size: smaller;
   }
   blockquote {
     border-left: 1px solid var(--color-primary);
