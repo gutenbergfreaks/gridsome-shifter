@@ -66,6 +66,12 @@ nav[role="navigation"] a {
   margin: 1em 0.75em 2em;
 }
 
+figure {
+    margin: 1em 0;
+    max-width: 100%;
+    overflow: scroll;
+}
+
 .layout {
   max-width: 640px;
   margin: 0 auto;
